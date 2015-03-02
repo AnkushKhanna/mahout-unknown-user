@@ -90,27 +90,5 @@ public class PredictRecommendation {
 		}
 		plusAnonymousUserDataModel.clearTempPrefs();
 		writer.write("\n");
-
-//		PreferenceArray anonymousPrefs = new GenericUserPreferenceArray(preferences.size());
-//		anonymousPrefs.setUserID(0, PlusAnonymousUserDataModel.TEMP_USER_ID);
-//		for (int i=0; i< preferences.size();i++) {
-//			GenericPreference pref = preferences.get(i);
-//			anonymousPrefs.setItemID(i, pref.getItemID());
-//			anonymousPrefs.setValue(i, pref.getValue());
-//		}
-//
-//		writer.write(user);
-//		this.plusAnonymousUserDataModel.setTempPrefs(anonymousPrefs);
-//		for (AnonymousPrediction pred : predictions) {
-//			float value = 0;
-//			try {
-//				value = this.recommender.estimatePreference(PlusAnonymousUserDataModel.TEMP_USER_ID, pred.getItemId());
-//			} catch (NoSuchUserException e) {
-//				System.out.println(user + " " + PlusAnonymousUserDataModel.TEMP_USER_ID);
-//			}
-//			writer.write("," + value);
-//		}
-//		writer.write("\n");
-//		plusAnonymousUserDataModel.clearTempPrefs();
 	}
 }

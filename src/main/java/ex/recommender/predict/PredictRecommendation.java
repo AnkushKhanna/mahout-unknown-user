@@ -2,7 +2,6 @@ package ex.recommender.predict;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -80,15 +79,22 @@ public class PredictRecommendation {
 			} catch (NoSuchUserException e) {
 				System.out.println(user + " " + PlusAnonymousUserDataModel.TEMP_USER_ID);
 			}
+			if(value == 0){
+				LOGGER.warning(user+"  "+PlusAnonymousUserDataModel.TEMP_USER_ID);
+			}
 			if(value == Float.NaN){
+				LOGGER.warning(user+"  "+PlusAnonymousUserDataModel.TEMP_USER_ID);
 				value = 0;
 			}
 			if(("NaN").equals(String.valueOf(value))){
+				LOGGER.warning(user+"  "+PlusAnonymousUserDataModel.TEMP_USER_ID);	
 				value = 0;
 			}
 			writer.write("," + value);
+			
 		}
 		plusAnonymousUserDataModel.clearTempPrefs();
+		
 		writer.write("\n");
 	}
 }

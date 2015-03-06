@@ -19,6 +19,7 @@ import org.apache.mahout.cf.taste.recommender.Recommender;
 import org.apache.mahout.cf.taste.similarity.ItemSimilarity;
 import org.apache.mahout.cf.taste.similarity.UserSimilarity;
 
+
 public class LearnRecommendationNN {
 	private int n;
 
@@ -42,6 +43,8 @@ public class LearnRecommendationNN {
 		}
 		return null;
 	}
+
+
 
 	/**
 	 * Learn NN recommendation from the trainPath using n neighbors specified in constructor. User Similarity.

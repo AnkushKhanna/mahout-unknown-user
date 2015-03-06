@@ -11,7 +11,6 @@ import org.apache.mahout.cf.taste.model.DataModel;
 import org.apache.mahout.cf.taste.recommender.Recommender;
 
 import ex.recommender.learn.LearnRecommendationNN;
-import ex.recommender.learn.LearnRecommendationSVD;
 import ex.recommender.learn.similarity.SimilarityMatrix;
 import ex.recommender.predict.PredictRecommendation;
 
